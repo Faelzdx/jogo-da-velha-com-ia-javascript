@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Arvo&family=Lato:wght@300;400&family=Noto+Sans:wght@300;400&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400&family=Rubik&family=Sen:wght@400;500&family=Sora:wght@300;400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #0C5EFF;
+  --winning-blocks: #b00100;
+}
+
+body {
+  color: var(--blue);
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #010626, #010B40, #021859);
+}
+
+#gameboard {
+  width: min(95%, 300px);
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+}
+
+#scoreboard {
+  margin-top: 40px;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: #f2f2f2;
+  width: min(95%, 200px);
+  max-width: 100%;
+}
+
+#difficulty-board {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+#difficulty-board select {
+  padding: 5px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  font-size: 120px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(6)~.box {
+  border-bottom: none;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  color: #f2f2f2;
+  border-color: var(--blue);
+  font-size: 1.2rem;
+  transition: 200ms transform;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.mode-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  color: #f2f2f2;
+  border-color: var(--blue);
+  font-size: 1.2rem;
+  transition: 200ms transform;
+  font-weight: 600;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
